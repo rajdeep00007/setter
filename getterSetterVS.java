@@ -2,48 +2,48 @@ package com.company;
 
 import java.util.*;
 
-class student{
-    int id;
+ class student{
+     int id;
     String firstName;
     String lastName;
     double percentage;
     String location;
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-//
-//    public void setFirstName(String firstName) {
-//        this.firstName = firstName;
-//    }
-//
-//    public void setLastName(String lastName) {
-//        this.lastName = lastName;
-//    }
-//
-//    public void setPercentage(double percentage) {
-//        this.percentage = percentage;
-//    }
-//
-//    public void setLocation(String location) {
-//        this.location = location;
-//    }
-
-
-    public void setData(int id,String firstName,String lastName,double percentage,String location) {
+    private void setId(int id) {
         this.id = id;
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.percentage=percentage;
+    }
+
+    private void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    private void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    private void setPercentage(double percentage) {
+        this.percentage = percentage;
+    }
+
+    private void setLocation(String location) {
         this.location = location;
     }
+
+
+//    public void setData(int id,String firstName,String lastName,double percentage,String location) {
+//        this.id = id;
+//        this.firstName=firstName;
+//        this.lastName=lastName;
+//        this.percentage=percentage;
+//        this.location = location;
+//    }
 
     public void print(){
         System.out.println(id + " | " + firstName + " | " + lastName + " | " + percentage + " | " + location);
     }
 
 }
-public class getterSetter {
+public class getterSetter extends student{
     public static void main(String[] args) {
         student st = new student();
         st.id=44;
@@ -60,7 +60,12 @@ public class getterSetter {
         st1.location="newyork";
 
         student st2 = new student();
-        st2.setData(42,"rajdeep","khachar",99.99,"Rajkot");
+       // st2.setData(42,"rajdeep","khachar",99.99,"Rajkot");
+        st2.id=4;
+        st2.firstName="salman";
+        st2.lastName="khan";
+        st2.percentage=77.08;
+        st2.location="mumbai";
 
         st2.print();
 //        st.print();
